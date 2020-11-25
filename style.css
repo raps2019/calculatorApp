@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    display:grid;
+    grid-template-columns: repeat(5,100px);
+    grid-auto-rows: 100px;
+    grid-gap: 10px;
+}
+
+.display {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   grid-column: 1 / 6;
+   background-color: lavenderblush;
+   border: 5px solid black;
+   padding-right: 10px;   
+}
+
+#display {
+    font-size: 3em;
+    font-family:'Black Ops One', cursive;
+    text-align: end;
+}
+
+.number,.negate {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    background-color: aliceblue;
+    border: 0.25px solid lightblue ;
+    /* transition: all ease-in 0s; */
+}
+
+.number:active {
+    opacity: 0.6;
+    font-size: 1.85em;
+    /* transform: scale(0.9); */
+}
+
+.operator:active {
+    opacity: 0.6;
+    font-size: 1.85em;
+    /* transform: scale(0.9); */
+}
+
+.operator {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.25em;
+    background-color: rgb(229, 226, 255);
+    border: 0.25px solid lightgreen ;
+    transition: all ease-in 0.1s;
+}
+
+.backspace,.clear {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.25em;
+    background-color: rgb(255, 173, 173);
+    border: 0.25px solid rgb(223, 209, 19) ;
+    transition: all ease-in 0.1s;
+}
+
+#equals {
+    grid-column: 5 / 6;
+    grid-row: 4 / 6;
+    background-color: rgb(220, 255, 229);
+}
